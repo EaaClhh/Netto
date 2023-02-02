@@ -9,8 +9,12 @@ var minutesNow = today.getMinutes();
 //Greeting
 var greeting;
 
+
+// CREDITS FOR padStart to: https://www.tutorialspoint.com/How-to-pad-a-number-with-leading-zeros-in-JavaScript 
 //Time for today
-var time = hourNow + ":" + minutesNow;
+var time = hourNow.toString().padStart(2, '0') + ":" + minutesNow.toString().padStart(2, '0') 
+
+
 
 //Weekday array
 var weekday = new Array(7);
@@ -44,3 +48,6 @@ document.write("<h3>" + time + "</h3>")
 
 //today.getDay() gives a number for current day. weekday[] prints out the day from the number received
 document.write("<h4>" + weekday[today.getDay()] + "</h4>")
+
+//prøver bare lige at lege lidt det med at forkert 
+document.write("<h4> Closed on "  + weekday[0] + "s </h4>")
